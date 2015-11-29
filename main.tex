@@ -1,0 +1,45 @@
+% package inclusion and set up of the document
+\input{preamble.tex}
+% special personal macros
+\input{macros.tex}
+
+\begin{document}
+
+\title{OFDMA Modulation Technique in 4G LTE Mobile Networks}
+\author{Julien BREHIN}
+\date{15/11/2015}
+
+\pagenumbering{Alph}
+\begin{titlepage}
+\maketitle
+\includegraphics[width=100pt]{aau_logo_en.pdf}
+% \thispagestyle{empty}
+\end{titlepage}
+
+\pdfbookmark[0]{Table of Contents}{label: tableOfContents}
+\tableofcontents
+
+\pagenumbering{arabic} %use arabic page numbering in the main matter
+\fancyfoot[RO,LE]{\thepage \text{ of} \pageref{LastPage}}
+
+% Abstract : Mobile Networks and Modulation Techniques 
+% Introductive matter to the subject
+\input{content/abstract.tex}
+
+% Chapter 1 : Orthogonal Frequency Division Multiplexing
+% OFDM and OFDMA explanation
+\input{content/ofdmToOfdma.tex}
+\input{content/ofdm.tex}     % OFDM description
+\input{content/ofdma.tex} % OFDMA description and comparison with OFDM  
+
+% Chapter 2 : OFDMA in 4G-LTE Mobile Networks
+% Link between OFDMA technique and 4G-LTE
+\input{content/ofdmaInLTENetwork.tex}
+
+%%% Setup for Appendix and Bibliography %%%
+\addtocontents{toc}{\bigskip}
+
+%%% Bibliography %%%
+\printbibliography
+
+\end{document}
