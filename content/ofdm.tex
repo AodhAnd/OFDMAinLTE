@@ -23,7 +23,7 @@ All these modulated signals are then put into an IFFT (\textit{Inverse Fast Four
 %
 Since, there is no undesirable interference due to frequency overlapping, the spacing between each sub-carrier can be very short. To maintain the orthogonality, this spacing, $\Delta f$, actually has to be the inverse of a symbol period, $T$ :
 \begin{flalign}
-\eq{\Delta f}{1/T}
+\eq{\Delta f}{1/T_S}\unit{Hz}
 \end{flalign}\\
 \indent Coming from this relation, and by sending information on parallel channels, it is possible to increase the overall data rate and therefore, the spectral efficiency, while decreasing the data rate on each subchannel. This helps to reduce potential ISI (\textit{Inter-Symbol Interferences}) at the receiver end, that could happen due to wave reflection, refraction or other multi-path phenomena \cite{RadioElOFDM} and is reinforced by a guard interval between each symbol.\\
 %
